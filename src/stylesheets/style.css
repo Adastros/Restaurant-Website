@@ -6,7 +6,7 @@
 
 :root {
   height: 100%;
-  font-family: "Bebas Neue", "Roboto";
+  font-family: "Bebas Neue", "Roboto", "sans-serif";
   font-size: 2.25rem;
 }
 
@@ -15,16 +15,28 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
 header {
+  height: 130px;
   margin-top: 1rem;
   color: white;
 }
 
-.homepage {
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.homepage-background {
   background: right/cover no-repeat url("../images/banner.jpg");
+}
+
+.homepage-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .nav-list {
@@ -37,23 +49,18 @@ header {
 }
 
 .nameLogoContainer {
-  height: 2.5rem;
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: "Bangers";
 }
 
 .logoImg {
-  height: 1.5rem;
+  height: 1.25rem;
 }
 
 .heroText {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 0 0.5rem;
+  margin-top: -130px; /* minus the height of the header to center hero message */
   text-align: center;
   color: white;
-
 }

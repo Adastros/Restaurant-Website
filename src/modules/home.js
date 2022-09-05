@@ -18,10 +18,12 @@ function createHeroMessage() {
 
 function renderHomePage() {
   let homePage = document.querySelector("main"),
-    bodyElement = document.querySelector("body");
+    bodyElement = document.querySelector("body"),
+    htmlElement = document.querySelector("html");
 
-  bodyElement.append(createHeroMessage());
-  addClass(bodyElement, "homepage");
+  homePage.append(createHeroMessage());
+  addClass(bodyElement, "homepage-overlay");
+  addClass(htmlElement, "homepage-background");
 
   return homePage;
 }
