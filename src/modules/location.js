@@ -2,7 +2,8 @@ import { createElement, addClass } from "./helper.js";
 import "../stylesheets/home.css";
 
 function renderLocationPage() {
-    console.log("Location");
+    let locationTab = document.querySelector(`[data-tab='location'`);
+    addClass(locationTab, "selected-tab");
 }
 
 export { renderLocationPage };

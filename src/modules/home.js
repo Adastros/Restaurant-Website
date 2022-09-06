@@ -19,11 +19,13 @@ function createHeroMessage() {
 function renderHomePage() {
   let homePage = document.querySelector("main"),
     bodyElement = document.querySelector("body"),
-    htmlElement = document.querySelector("html");
+    htmlElement = document.querySelector("html"),
+    homeTab = document.querySelector(`[data-tab = 'home']`);
 
   homePage.append(createHeroMessage());
   addClass(bodyElement, "homepage-overlay");
   addClass(htmlElement, "homepage-background");
+  addClass(homeTab, "selected-tab");
 
   return homePage;
 }

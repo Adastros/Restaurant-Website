@@ -2,22 +2,22 @@ import { renderHomePage } from "./home.js";
 import { renderMenuPage } from "./menu.js";
 import { renderAboutPage } from "./about.js";
 import { renderLocationPage } from "./location.js";
-import { createElement, addClass } from "./helper.js";
+import { createElement, addClass, removeClass } from "./helper.js";
 import logo from "../images/logo.png";
 import "../stylesheets/style.css";
 
 function renderPage(page) {
   switch (page) {
-    case "Home":
+    case "home":
       renderHomePage();
       break;
-    case "Menu":
+    case "menu":
       renderMenuPage();
       break;
-    case "About":
+    case "about":
       renderAboutPage();
       break;
-    case "Location":
+    case "location":
       renderLocationPage();
       break;
     default:
@@ -28,8 +28,11 @@ function renderPage(page) {
 
 function addNavItemListener(navListItem) {
   navListItem.addEventListener("click", (e) => {
-    let mainElement = document.querySelector("main");
+    let mainElement = document.querySelector("main"),
+      currentSelectedNavListItem = document.querySelector(".selected-tab");
 
+    removeClass(currentSelectedNavListItem, "selected-tab");
+    
     // clear out all child elements
     while (mainElement.firstChild) {
       mainElement.removeChild(mainElement.firstChild);
@@ -60,7 +63,7 @@ function createNameAndLogo() {
 function createNav() {
   let navElement = createElement("nav"),
     navList = createElement("ul"),
-    navListItemArr = ["Home", "Menu", "About", "Location"];
+    navListItemArr = ["home", "menu", "about", "location"]; // font used is capitalized by default
 
   for (let i = 0; i < 4; i++) {
     let navListItem = createElement("li"),
@@ -68,11 +71,12 @@ function createNav() {
 
     itemAnchor.textContent = navListItemArr[i];
     itemAnchor.setAttribute("href", "#");
+    itemAnchor.dataset.tab = navListItemArr[i];
 
-    // highlight the home tab on page load
-    if (i === 0) {
-      addClass(itemAnchor, "selected-tab");
-    }
+    // // highlight the home tab on page load
+    // if (i === 0) {
+    //   addClass(itemAnchor, "selected-tab");
+    // } 
 
     navListItem.append(itemAnchor);
     addNavItemListener(navListItem);

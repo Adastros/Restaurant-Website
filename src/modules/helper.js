@@ -6,4 +6,8 @@ function addClass(element, cssClass) {
   element.classList.add(cssClass);
 }
 
-export { createElement, addClass };
+function removeClass(element, cssClass) {
+  element.classList.remove(cssClass);
+}
+
+export { createElement, addClass, removeClass};
