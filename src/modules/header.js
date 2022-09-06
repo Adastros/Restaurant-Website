@@ -28,11 +28,16 @@ function renderPage(page) {
 
 function addNavItemListener(navListItem) {
   navListItem.addEventListener("click", (e) => {
-    let mainElement = document.querySelector("main"),
+    let htmlElement = document.querySelector("html"),
+      bodyElement = document.querySelector("body"),
+      mainElement = document.querySelector("main"),
       currentSelectedNavListItem = document.querySelector(".selected-tab");
-
+   
+    htmlElement.removeAttribute("class");
+    bodyElement.removeAttribute("class");
+    mainElement.removeAttribute("class");
     removeClass(currentSelectedNavListItem, "selected-tab");
-    
+
     // clear out all child elements
     while (mainElement.firstChild) {
       mainElement.removeChild(mainElement.firstChild);
@@ -72,11 +77,6 @@ function createNav() {
     itemAnchor.textContent = navListItemArr[i];
     itemAnchor.setAttribute("href", "#");
     itemAnchor.dataset.tab = navListItemArr[i];
-
-    // // highlight the home tab on page load
-    // if (i === 0) {
-    //   addClass(itemAnchor, "selected-tab");
-    // } 
 
     navListItem.append(itemAnchor);
     addNavItemListener(navListItem);

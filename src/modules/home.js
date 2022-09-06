@@ -17,14 +17,15 @@ function createHeroMessage() {
 }
 
 function renderHomePage() {
-  let homePage = document.querySelector("main"),
+  let htmlElement = document.querySelector("html"),
     bodyElement = document.querySelector("body"),
-    htmlElement = document.querySelector("html"),
+    homePage = document.querySelector("main"),
     homeTab = document.querySelector(`[data-tab = 'home']`);
 
   homePage.append(createHeroMessage());
-  addClass(bodyElement, "homepage-overlay");
+
   addClass(htmlElement, "homepage-background");
+  addClass(bodyElement, "homepage-overlay");
   addClass(homeTab, "selected-tab");
 
   return homePage;
