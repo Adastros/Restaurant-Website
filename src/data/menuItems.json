@@ -1,0 +1,38 @@
+[
+  {
+    "type": "entree",
+    "name": "Original Bangin Burger",
+    "description": "One beef patty, smoked bacon, lettuce, sliced pickles, red onions, cheddar cheese, tomato, Bangin sauce, whole wheat buns",
+    "price": 8
+  },
+  {
+    "type": "entree",
+    "name": "Double Bang Burger",
+    "description": "Two beef patties, smoked bacon, lettuce, sliced pickles, red onions, cheddar cheese, tomato, Bangin sauce, whole wheat buns",
+    "price": 12
+  },
+  {
+    "type": "entree",
+    "name": "Beyond Bangin Burger",
+    "description": "One Beyond Meat patty, lettuce, sliced pickles, red onions, vegan cheese, tomato topped, Bangin Vegan sauce, whole wheat buns",
+    "price": 9
+  },
+  {
+    "type": "entree",
+    "name": "Bangin Bird Burger",
+    "description": "One fried chicken boneless thigh meat, lettuce, sliced pickles, red onions, tomato, Bangin sauce, whole wheat buns",
+    "price": 7
+  },
+  {
+    "type": "side",
+    "name": "Bangin Fries",
+    "description": "Seasoned with our Bangin spice",
+    "price": 2
+  },
+  {
+    "type": "side",
+    "name": "Sweet Potato Fries",
+    "description": "Seasoned with our Bangin spice",
+    "price": 3
+  }
+]

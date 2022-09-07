@@ -47,12 +47,43 @@ h2 {
   color: white;
 }
 
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat();
+}
+
 .homepage-background {
   background: right/cover no-repeat url("../images/banner.jpg");
 }
 
 .homepage-overlay {
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+.homepage-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.menu-page-background {
+  background: 40% / cover no-repeat url("../images/menuPageBackground.jpg");
+}
+
+.menu-page-overlay {
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-container {
+    margin-top: -130px;
+    padding: 2rem;
+    text-align: center;
+    color: white;
+}
+
+.entree-container {
+    
 }
 
 .nav-list {

@@ -23,6 +23,7 @@ function renderHomePage() {
     homeTab = document.querySelector(`[data-tab = 'home']`);
 
   homePage.append(createHeroMessage());
+  addClass(homePage, 'homepage-flex');
 
   addClass(htmlElement, "homepage-background");
   addClass(bodyElement, "homepage-overlay");
