@@ -47,11 +47,6 @@ h2 {
   color: white;
 }
 
-.main-grid {
-  display: grid;
-  grid-template-columns: repeat();
-}
-
 .homepage-background {
   background: right/cover no-repeat url("../images/banner.jpg");
 }
@@ -61,10 +56,10 @@ h2 {
 }
 
 .homepage-flex {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .menu-page-background {
   background: 40% / cover no-repeat url("../images/menuPageBackground.jpg");
@@ -76,14 +71,31 @@ h2 {
 }
 
 .menu-container {
-    margin-top: -130px;
-    padding: 2rem;
-    text-align: center;
-    color: white;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.menu-container h2 {
+  text-decoration: underline;
 }
 
 .entree-container {
-    
+  margin-bottom: 1rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 0.5rem;
+}
+
+.menu-item > p {
+  font-size: 0.5rem;
+}
+
+.menu-item > p > i {
+  margin-left: 0.25rem;
 }
 
 .nav-list {

@@ -6,33 +6,45 @@ function createMenu() {
   let menuContainer = createElement("div"),
     entreeContainer = createElement("div"),
     sidesContainer = createElement("div"),
+    entreeItemContainer = createElement("div"),
+    sidesItemContainer = createElement("div"),
     entreeHeader = createElement("h2"),
     sidesHeader = createElement("h2");
-
-  entreeHeader.textContent = "Burgers";
-  sidesHeader.textContent = "Sides";
-  entreeContainer.append(entreeHeader);
-  sidesContainer.append(sidesHeader);
-  addClass(entreeContainer, 'entree-container');
-  addClass(sidesContainer, 'sides-container');
 
   menuItems.forEach((item) => {
     let menuItem = createElement("div"),
       itemHeader = createElement("h3"),
-      itemDescription = createElement("p");
+      itemDescription = createElement("p"),
+      itemPrice = createElement("i");
 
     itemHeader.textContent = item.name;
-    itemDescription.textContent = item.description + " " + item.price;
+    itemDescription.textContent = item.description;
+    itemPrice.textContent = item.price;
 
+    itemDescription.append(itemPrice);
     menuItem.append(itemHeader);
     menuItem.append(itemDescription);
+    addClass(menuItem, "menu-item");
 
     if (item.type === "entree") {
-      entreeContainer.append(menuItem);
+      entreeItemContainer.append(menuItem);
     } else {
-      sidesContainer.append(menuItem);
+      sidesItemContainer.append(menuItem);
     }
   });
+
+  addClass(entreeItemContainer, "menu-grid");
+  addClass(sidesItemContainer, "menu-grid");
+
+  entreeHeader.textContent = "Burgers";
+  entreeContainer.append(entreeHeader);
+  entreeContainer.append(entreeItemContainer);
+  addClass(entreeContainer, "entree-container");
+
+  sidesHeader.textContent = "Sides";
+  sidesContainer.append(sidesHeader);
+  sidesContainer.append(sidesItemContainer);
+  addClass(sidesContainer, "sides-container");
 
   menuContainer.append(entreeContainer);
   menuContainer.append(sidesContainer);
