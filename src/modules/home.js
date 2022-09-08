@@ -11,7 +11,8 @@ function createHeroMessage() {
 
   heroMessageContainer.append(heroMainText);
   heroMessageContainer.append(heroSubtext);
-  addClass(heroMessageContainer, "heroText");
+  addClass(heroMessageContainer, "hero-container");
+  addClass(heroSubtext, 'hero-subtext');
 
   return heroMessageContainer;
 }

@@ -24,6 +24,7 @@ function createMenu() {
     itemDescription.append(itemPrice);
     menuItem.append(itemHeader);
     menuItem.append(itemDescription);
+
     addClass(menuItem, "menu-item");
 
     if (item.type === "entree") {

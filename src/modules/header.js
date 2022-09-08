@@ -50,17 +50,18 @@ function addNavItemListener(navListItem) {
 
 function createNameAndLogo() {
   let restaurantNameAndLogoContainer = createElement("div"),
-    restaurantNameElement = createElement("h2"),
+    restaurantNameElement = createElement("div"),
     logoElement = createElement("img");
 
   restaurantNameElement.textContent = `Bob's Bangin Burgers`;
+  addClass(restaurantNameElement, 'logo-name')
   logoElement.setAttribute("src", logo);
   logoElement.setAttribute("alt", `Bob's Bangin Burgers Logo`);
   addClass(logoElement, "logoImg");
 
   restaurantNameAndLogoContainer.append(restaurantNameElement);
   restaurantNameAndLogoContainer.append(logoElement);
-  addClass(restaurantNameAndLogoContainer, "nameLogoContainer");
+  addClass(restaurantNameAndLogoContainer, "site-logo");
 
   return restaurantNameAndLogoContainer;
 }
