@@ -68,11 +68,15 @@ a:hover {
 }
 
 .menu-container h2 {
-  font-size: 2.25rem;
+  font-size: 3.25rem;
   text-decoration: underline;
 }
 
 .menu-container h3 {
+  font-size: 2.75rem;
+}
+
+.menu-container p {
   font-size: 1.75rem;
 }
 
@@ -95,9 +99,9 @@ a:hover {
   justify-content: center;
   align-items: center;
   margin-top: 0.5rem;
-  gap: 1rem;
+  gap: 1.5rem;
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
 
 .selected-tab {
@@ -111,12 +115,12 @@ a:hover {
 }
 
 .logo-name {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: white;
 }
 
 .logoImg {
-  height: 2.25rem;
+  height: 2.75rem;
 }
 
 .hero-container {
@@ -127,9 +131,9 @@ a:hover {
 }
 
 .hero-container > h1 {
-  font-size: 4.5rem;
+  font-size: 5rem;
 }
 
 .hero-subtext {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
 }
