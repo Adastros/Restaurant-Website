@@ -86,8 +86,8 @@ a:hover {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
 }
 
 .menu-item > p > i {
