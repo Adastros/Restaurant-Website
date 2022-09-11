@@ -7,6 +7,7 @@
 :root {
   height: 100%;
   font-family: "Bebas Neue", "Roboto", "sans-serif";
+  background-color: black;
 }
 
 body {
@@ -94,6 +95,24 @@ a:hover {
   margin-left: 0.5rem;
 }
 
+.about-page-main-container {
+  height: 600px;
+  min-width: 768px;
+  margin: 0 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.about-history-container {
+  max-width: 500px;
+}
+
+.about-img {
+  width: 30%;
+}
+
 .nav-list {
   display: flex;
   justify-content: center;
@@ -110,6 +129,7 @@ a:hover {
 
 .site-logo {
   display: flex;
+  justify-content: center;
   align-items: center;
   gap: 10px;
 }
