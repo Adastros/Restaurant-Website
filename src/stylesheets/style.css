@@ -110,7 +110,41 @@ a:hover {
 }
 
 .about-img {
-  width: 30%;
+  height: 100%;
+}
+
+.contact-page {
+  color: white;
+}
+.contact-page-content-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.contact-page h2 {
+  margin-bottom: 1rem;
+}
+
+.contact-page a,
+.contact-page img {
+  height: 3rem;
+}
+
+.contact-page img {
+  margin-right: 1rem;
+}
+
+.contact-page iframe {
+  height: 100%;
+  width: 100%;
+  border: none;
+}
+
+.contact-page-business-info-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .nav-list {

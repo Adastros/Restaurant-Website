@@ -6,7 +6,7 @@ function createAboutPageElements() {
   let aboutContainer = createElement("div"),
     aboutHistoryContainer = createElement("div"),
     aboutHeader = createElement("h1"),
-    aboutHistory = createElement("div"),
+    aboutHistory = createElement("p"),
     aboutImage = createElement("img");
 
   aboutHeader.textContent = `Making Bangin Burgers`;

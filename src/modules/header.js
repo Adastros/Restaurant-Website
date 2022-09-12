@@ -1,7 +1,7 @@
 import { renderHomePage } from "./home.js";
 import { renderMenuPage } from "./menu.js";
 import { renderAboutPage } from "./about.js";
-import { renderLocationPage } from "./location.js";
+import { renderContactPage } from "./contact.js";
 import { createElement, addClass, removeClass } from "./helper.js";
 import logo from "../images/logo.png";
 import "../stylesheets/style.css";
@@ -17,8 +17,8 @@ function renderPage(page) {
     case "about":
       renderAboutPage();
       break;
-    case "location":
-      renderLocationPage();
+    case "contact":
+      renderContactPage();
       break;
     default:
       renderHomePage();
@@ -69,7 +69,7 @@ function createNameAndLogo() {
 function createNav() {
   let navElement = createElement("nav"),
     navList = createElement("ul"),
-    navListItemArr = ["home", "menu", "about", "location"]; // font used is capitalized by default
+    navListItemArr = ["home", "menu", "about", "contact"]; // font used is capitalized by default
 
   for (let i = 0; i < 4; i++) {
     let navListItem = createElement("li"),
