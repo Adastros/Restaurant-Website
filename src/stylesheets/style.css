@@ -102,13 +102,25 @@ a:hover {
 }
 
 .about-page-main-container {
-  height: 600px;
-  min-width: 768px;
-  margin: 0 3rem;
+  max-width: 80%;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  margin: 2rem;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  border-radius: 8px;
   color: white;
+  background-color: #5d737e;
+}
+
+.about-page-main-container h1 {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+}
+
+.about-page-main-container p {
+  font-size: 1.5rem;
 }
 
 .about-history-container {
@@ -116,7 +128,8 @@ a:hover {
 }
 
 .about-img {
-  height: 100%;
+  height: auto;
+  width: 50%;
 }
 
 .contact-page {
