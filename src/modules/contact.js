@@ -7,7 +7,7 @@ import "../stylesheets/home.css";
 function createAddressContent() {
   let addressContainer = createElement("div"),
     addressHeader = createElement("h2"),
-    address = createElement("div");
+    address = createElement("p");
 
   addressHeader.textContent = "Address";
   address.textContent = "727 N Broadway, Los Angeles, CA 90012";
@@ -33,6 +33,7 @@ function createBusinessHoursContent() {
 function createSocialMediaLinks() {
   let socialMediaContainer = createElement("div"),
     socialMediaHeader = createElement("h2"),
+    iconContainer = createElement('div'),
     facebookIcon = createElement("img"),
     instagramIcon = createElement("img"),
     twitterIcon = createElement("img"),
@@ -57,10 +58,14 @@ function createSocialMediaLinks() {
   twitterLink.setAttribute("href", "#");
   twitterLink.append(twitterIcon);
 
+  addClass(iconContainer, 'icon-container')
+  addClass(socialMediaContainer, 'social-media-container')
+
+  iconContainer.append(facebookLink);
+  iconContainer.append(instagramLink);
+  iconContainer.append(twitterLink);
   socialMediaContainer.append(socialMediaHeader);
-  socialMediaContainer.append(facebookLink);
-  socialMediaContainer.append(instagramLink);
-  socialMediaContainer.append(twitterLink);
+  socialMediaContainer.append(iconContainer);
 
   return socialMediaContainer;
 }
@@ -76,6 +81,8 @@ function createGoogleMapsInteractable() {
   googleMap.setAttribute("loading", "lazy");
   googleMap.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
 
+  addClass(googleMapsContainer, "contact-page-google-maps-container");
+
   googleMapsContainer.append(googleMap);
 
   return googleMapsContainer;
@@ -90,6 +97,7 @@ function createContactContent() {
     googleMapInterable = createGoogleMapsInteractable();
 
   addClass(businessInfoContainer, "contact-page-business-info-container");
+  addClass(contactContentContainer, "contact-page-content-container");
 
   businessInfoContainer.append(
     addressContent,
@@ -97,7 +105,7 @@ function createContactContent() {
     socialMediaLinks
   );
   contactContentContainer.append(businessInfoContainer, googleMapInterable);
-  addClass(contactContentContainer, "contact-page-content-container");
+
   return contactContentContainer;
 }
 

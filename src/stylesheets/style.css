@@ -135,35 +135,56 @@ a:hover {
 .contact-page {
   color: white;
 }
-.contact-page-content-container {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
 
 .contact-page h2 {
+  font-size: 2.25rem;
   margin-bottom: 1rem;
+}
+
+.contact-page p {
+  font-size: 1.5rem;
 }
 
 .contact-page a,
 .contact-page img {
-  height: 3rem;
-}
-
-.contact-page img {
-  margin-right: 1rem;
+  height: 50px;
 }
 
 .contact-page iframe {
-  height: 100%;
-  width: 100%;
+  height: 400px;
+  width: 400px;
   border: none;
+}
+
+.contact-page-content-container {
+  display: flex;
+  align-items: center;
+  margin: 2rem;
+  padding: 2rem;
+  gap: 4rem;
+  border-radius: 8px;
+  background-color: #5d737e;
 }
 
 .contact-page-business-info-container {
   display: flex;
   flex-direction: column;
+  flex: 1;
   gap: 1rem;
+}
+
+.contact-page-google-maps-container {
+  flex: 1;
+}
+
+.icon-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-media-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .nav-list {
