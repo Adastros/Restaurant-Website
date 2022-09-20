@@ -30,10 +30,24 @@ function createBusinessHoursContent() {
   return businessHoursContainer;
 }
 
+function createPhoneNumberContent() {
+  let phoneNumberContainer = createElement("div"),
+    phoneNumberHeader = createElement("h2"),
+    phoneNumber = createElement("div");
+
+  phoneNumberHeader.textContent = "Phone";
+  phoneNumber.textContent = "(555) 123-4567";
+
+  addClass(phoneNumberContainer, "phone-number-container");
+  phoneNumberContainer.append(phoneNumberHeader, phoneNumber);
+
+  return phoneNumberContainer;
+}
+
 function createSocialMediaLinks() {
   let socialMediaContainer = createElement("div"),
     socialMediaHeader = createElement("h2"),
-    iconContainer = createElement('div'),
+    iconContainer = createElement("div"),
     facebookIcon = createElement("img"),
     instagramIcon = createElement("img"),
     twitterIcon = createElement("img"),
@@ -58,8 +72,8 @@ function createSocialMediaLinks() {
   twitterLink.setAttribute("href", "#");
   twitterLink.append(twitterIcon);
 
-  addClass(iconContainer, 'icon-container')
-  addClass(socialMediaContainer, 'social-media-container')
+  addClass(iconContainer, "icon-container");
+  addClass(socialMediaContainer, "social-media-container");
 
   iconContainer.append(facebookLink);
   iconContainer.append(instagramLink);
@@ -93,6 +107,7 @@ function createContactContent() {
     businessInfoContainer = createElement("div"),
     addressContent = createAddressContent(),
     businessHoursContent = createBusinessHoursContent(),
+    phoneNumberContent = createPhoneNumberContent(),
     socialMediaLinks = createSocialMediaLinks(),
     googleMapInterable = createGoogleMapsInteractable();
 
@@ -100,8 +115,9 @@ function createContactContent() {
   addClass(contactContentContainer, "contact-page-content-container");
 
   businessInfoContainer.append(
-    addressContent,
+    phoneNumberContent,
     businessHoursContent,
+    addressContent,
     socialMediaLinks
   );
   contactContentContainer.append(businessInfoContainer, googleMapInterable);

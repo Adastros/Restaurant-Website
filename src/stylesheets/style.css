@@ -138,10 +138,10 @@ a:hover {
 
 .contact-page h2 {
   font-size: 2.25rem;
-  margin-bottom: 1rem;
 }
 
-.contact-page p {
+.contact-page p,
+.phone-number-container {
   font-size: 1.5rem;
 }
 
@@ -170,7 +170,7 @@ a:hover {
   display: flex;
   flex-direction: column;
   flex: 1;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .contact-page-google-maps-container {
@@ -185,6 +185,7 @@ a:hover {
 .social-media-container {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
 }
 
 .nav-list {
