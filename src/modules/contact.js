@@ -102,16 +102,103 @@ function createGoogleMapsInteractable() {
   return googleMapsContainer;
 }
 
+function createContactForm() {
+  let contactFormContainer = createElement("div"),
+    contactFormHeaderContainer = createElement("div"),
+    contactFormHeader = createElement("h2"),
+    contactFormSubText = createElement("p"),
+    contactForm = createElement("form"),
+    firstNameContainer = createElement("div"),
+    firstNameLabel = createElement("label"),
+    firstNameInput = createElement("input"),
+    lastNameContainer = createElement("div"),
+    lastNameLabel = createElement("label"),
+    lastNameInput = createElement("input"),
+    emailContainer = createElement("div"),
+    emailLabel = createElement("label"),
+    emailInput = createElement("input"),
+    messageContainer = createElement("div"),
+    messageLabel = createElement("label"),
+    messageTextarea = createElement("textarea"),
+    submitButton = createElement("button");
+
+  contactFormHeader.textContent = "Questions? Want to tell us something?";
+  contactFormSubText.textContent =
+    "Send us a message using the contact form below";
+
+  firstNameLabel.textContent = "First Name:";
+  firstNameLabel.setAttribute("for", "first-name");
+  firstNameInput.setAttribute("id", "first-name");
+  firstNameInput.setAttribute("type", "text");
+  firstNameInput.setAttribute("name", "firstName");
+  firstNameInput.setAttribute("placeholder", "First Name");
+  firstNameInput.setAttribute("required", "");
+
+  lastNameLabel.textContent = "Last Name:";
+  lastNameLabel.setAttribute("for", "last-name");
+  lastNameInput.setAttribute("id", "last-name");
+  lastNameInput.setAttribute("type", "text");
+  lastNameInput.setAttribute("name", "lastName");
+  lastNameInput.setAttribute("placeholder", "Last Name");
+  lastNameInput.setAttribute("required", "");
+
+  emailLabel.textContent = "Email:";
+  emailLabel.setAttribute("for", "email");
+  emailInput.setAttribute("id", "email");
+  emailInput.setAttribute("type", "email");
+  emailInput.setAttribute("name", "email");
+  emailInput.setAttribute("placeholder", "Email");
+  emailInput.setAttribute("required", "");
+
+  messageLabel.textContent = "Message:";
+  messageLabel.setAttribute("for", "message");
+  messageTextarea.setAttribute("id", "message");
+  messageTextarea.setAttribute("name", "message");
+  messageTextarea.setAttribute("rows", "5");
+  messageTextarea.setAttribute("cols", "50");
+  messageTextarea.setAttribute("required", "");
+
+  submitButton.textContent = "SUBMIT";
+  submitButton.setAttribute("type", "submit");
+
+  addClass(contactFormHeaderContainer, "header-container");
+  addClass(firstNameContainer, "input-field");
+  addClass(lastNameContainer, "input-field");
+  addClass(emailContainer, "input-field");
+  addClass(messageContainer, "input-field");
+  addClass(contactForm, "contact-form");
+  addClass(contactFormContainer, "contact-form-container");
+
+  contactFormHeaderContainer.append(contactFormHeader, contactFormSubText);
+  firstNameContainer.append(firstNameLabel, firstNameInput);
+  lastNameContainer.append(lastNameLabel, lastNameInput);
+  emailContainer.append(emailLabel, emailInput);
+  messageContainer.append(messageLabel, messageTextarea);
+  contactForm.append(
+    firstNameContainer,
+    lastNameContainer,
+    emailContainer,
+    messageContainer,
+    submitButton
+  );
+  contactFormContainer.append(contactFormHeaderContainer, contactForm);
+
+  return contactFormContainer;
+}
+
 function createContactContent() {
   let contactContentContainer = createElement("div"),
+    businessContactContainer = createElement("div"),
     businessInfoContainer = createElement("div"),
     addressContent = createAddressContent(),
     businessHoursContent = createBusinessHoursContent(),
     phoneNumberContent = createPhoneNumberContent(),
     socialMediaLinks = createSocialMediaLinks(),
-    googleMapInterable = createGoogleMapsInteractable();
+    googleMapInterable = createGoogleMapsInteractable(),
+    contactForm = createContactForm();
 
   addClass(businessInfoContainer, "contact-page-business-info-container");
+  addClass(businessContactContainer, "contact-page-business-contact-container");
   addClass(contactContentContainer, "contact-page-content-container");
 
   businessInfoContainer.append(
@@ -120,7 +207,10 @@ function createContactContent() {
     addressContent,
     socialMediaLinks
   );
-  contactContentContainer.append(businessInfoContainer, googleMapInterable);
+
+  businessContactContainer.append(businessInfoContainer, contactForm);
+
+  contactContentContainer.append(googleMapInterable, businessContactContainer);
 
   return contactContentContainer;
 }
