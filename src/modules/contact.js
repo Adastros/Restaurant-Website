@@ -55,7 +55,7 @@ function createSocialMediaLinks() {
     instagramLink = createElement("a"),
     twitterLink = createElement("a");
 
-  socialMediaHeader.textContent = "Follow us on";
+  socialMediaHeader.textContent = "Follow us";
 
   facebookIcon.setAttribute("src", facebookIconImg);
   facebookIcon.setAttribute("alt", "Facebook icon");
@@ -132,6 +132,7 @@ function createContactForm() {
   firstNameInput.setAttribute("type", "text");
   firstNameInput.setAttribute("name", "firstName");
   firstNameInput.setAttribute("placeholder", "First Name");
+  firstNameInput.setAttribute('maxlength', '100');
   firstNameInput.setAttribute("required", "");
 
   lastNameLabel.textContent = "Last Name:";
@@ -140,6 +141,7 @@ function createContactForm() {
   lastNameInput.setAttribute("type", "text");
   lastNameInput.setAttribute("name", "lastName");
   lastNameInput.setAttribute("placeholder", "Last Name");
+  lastNameInput.setAttribute('maxlength', '100');
   lastNameInput.setAttribute("required", "");
 
   emailLabel.textContent = "Email:";
@@ -148,6 +150,7 @@ function createContactForm() {
   emailInput.setAttribute("type", "email");
   emailInput.setAttribute("name", "email");
   emailInput.setAttribute("placeholder", "Email");
+  emailInput.setAttribute('maxlength', '200');
   emailInput.setAttribute("required", "");
 
   messageLabel.textContent = "Message:";
@@ -155,11 +158,16 @@ function createContactForm() {
   messageTextarea.setAttribute("id", "message");
   messageTextarea.setAttribute("name", "message");
   messageTextarea.setAttribute("rows", "5");
-  messageTextarea.setAttribute("cols", "50");
+  messageTextarea.setAttribute("cols", "30");
+  messageTextarea.setAttribute('maxlength', '2000');
   messageTextarea.setAttribute("required", "");
 
   submitButton.textContent = "SUBMIT";
   submitButton.setAttribute("type", "submit");
+
+  contactForm.setAttribute("action", "");
+  contactForm.setAttribute("method", "post");
+  contactForm.setAttribute("name", "contactForm");
 
   addClass(contactFormHeaderContainer, "header-container");
   addClass(firstNameContainer, "input-field");
