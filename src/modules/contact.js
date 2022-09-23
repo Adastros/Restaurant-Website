@@ -72,7 +72,7 @@ function createSocialMediaLinks() {
   twitterLink.setAttribute("href", "#");
   twitterLink.append(twitterIcon);
 
-  addClass(iconContainer, "icon-container");
+  addClass(iconContainer, "social-media-icon-container");
   addClass(socialMediaContainer, "social-media-container");
 
   iconContainer.append(facebookLink);

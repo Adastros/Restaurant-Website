@@ -18,16 +18,16 @@ function createHeroMessage() {
 }
 
 function renderHomePage() {
-  let htmlElement = document.querySelector("html"),
-    bodyElement = document.querySelector("body"),
+  let bodyElement = document.querySelector("body"),
+    contentDiv = document.querySelector(".content"),
     mainElement = document.querySelector("main"),
     homeTab = document.querySelector(`[data-tab = 'home']`);
 
   mainElement.append(createHeroMessage());
   addClass(mainElement, "homepage-hero-offset");
 
-  addClass(htmlElement, "homepage-background");
-  addClass(bodyElement, "homepage-overlay");
+  addClass(bodyElement, "homepage-background");
+  addClass(contentDiv, "homepage-overlay");
   addClass(homeTab, "selected-tab");
 }
 

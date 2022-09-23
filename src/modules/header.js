@@ -28,15 +28,16 @@ function renderPage(page) {
 
 function addNavItemListener(navListItem) {
   navListItem.addEventListener("click", (e) => {
-    let htmlElement = document.querySelector("html"),
-      bodyElement = document.querySelector("body"),
+    let bodyElement = document.querySelector("body"),
       mainElement = document.querySelector("main"),
+      contentDiv = document.querySelector(".content"),
       currentSelectedNavListItem = document.querySelector(".selected-tab");
-   
-    htmlElement.removeAttribute("class");
+
+    // clear out unneeded classes
     bodyElement.removeAttribute("class");
     mainElement.removeAttribute("class");
     removeClass(currentSelectedNavListItem, "selected-tab");
+    contentDiv.className = "content";
 
     // clear out all child elements
     while (mainElement.firstChild) {
@@ -54,7 +55,7 @@ function createNameAndLogo() {
     logoElement = createElement("img");
 
   restaurantNameElement.textContent = `Bob's Bangin Burgers`;
-  addClass(restaurantNameElement, 'logo-name')
+  addClass(restaurantNameElement, "logo-name");
   logoElement.setAttribute("src", logo);
   logoElement.setAttribute("alt", `Bob's Bangin Burgers Logo`);
   addClass(logoElement, "logoImg");

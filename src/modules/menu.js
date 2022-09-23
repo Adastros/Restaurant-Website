@@ -55,13 +55,13 @@ function createMenu() {
 }
 
 function renderMenuPage() {
-  let menuTab = document.querySelector(`[data-tab='menu']`),
-    htmlElement = document.querySelector("html"),
-    bodyElement = document.querySelector("body"),
-    mainElement = document.querySelector("main");
+  let bodyElement = document.querySelector("body"),
+    contentDiv = document.querySelector(".content"),
+    mainElement = document.querySelector("main"),
+    menuTab = document.querySelector(`[data-tab='menu']`);
 
-  addClass(htmlElement, "menu-page-background");
-  addClass(bodyElement, "menu-page-overlay");
+  addClass(bodyElement, "menu-page-background");
+  addClass(contentDiv, "menu-page-overlay");
   addClass(menuTab, "selected-tab");
 
   mainElement.append(createMenu());
