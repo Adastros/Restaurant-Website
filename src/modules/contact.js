@@ -2,7 +2,7 @@ import { createElement, addClass } from "./helper.js";
 import facebookIconImg from "../images/f_logo_RGB-Blue_72.png";
 import instagramIconImg from "../images/Instagram_Glyph_Gradient_RGB.svg";
 import twitterIconImg from "../images/Twitter social icons - circle - blue.svg";
-import "../stylesheets/home.css";
+import "../stylesheets/contact.css";
 
 function createAddressContent() {
   let addressContainer = createElement("div"),
@@ -171,7 +171,7 @@ function createContactForm() {
   contactForm.setAttribute("method", "post");
   contactForm.setAttribute("name", "contactForm");
 
-  addClass(contactFormHeaderContainer, "header-container");
+  addClass(contactFormHeaderContainer, "contact-form-header-container");
   addClass(firstNameContainer, "input-field");
   addClass(lastNameContainer, "input-field");
   addClass(emailContainer, "input-field");

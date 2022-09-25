@@ -1,0 +1,30 @@
+.about-page-main-container {
+  max-width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 2rem;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  border-radius: 8px;
+  color: white;
+  background-color: #5d737e;
+}
+
+.about-page-main-container h1 {
+  margin-bottom: 1rem;
+  font-size: 2.25rem;
+}
+
+.about-page-main-container p {
+  font-size: 1.5rem;
+}
+
+.about-history-container {
+  max-width: 500px;
+}
+
+.about-img {
+  height: auto;
+  width: 50%;
+}

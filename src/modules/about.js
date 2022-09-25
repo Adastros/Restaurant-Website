@@ -1,6 +1,6 @@
 import { createElement, addClass } from "./helper.js";
 import aboutImg from "../images/chefBob.jpg";
-import "../stylesheets/home.css";
+import "../stylesheets/about.css";
 
 function createAboutPageElements() {
   let aboutContainer = createElement("div"),

@@ -1,0 +1,29 @@
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+  gap: 1.5rem;
+  list-style: none;
+  font-size: 2.5rem;
+}
+
+.selected-tab {
+  color: white;
+}
+
+.site-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-name {
+  font-size: 3.5rem;
+  color: white;
+}
+
+.logoImg {
+  height: 2.75rem;
+}

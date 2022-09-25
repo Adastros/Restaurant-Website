@@ -1,0 +1,24 @@
+.homepage-background {
+  background: right/cover no-repeat url("../images/banner.jpg");
+}
+
+.homepage-overlay {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.homepage-hero-offset {
+  margin-bottom: 130px;
+}
+
+.hero-container {
+  text-align: center;
+  color: white;
+}
+
+.hero-container > h1 {
+  font-size: 5rem;
+}
+
+.hero-subtext {
+  font-size: 2.5rem;
+}

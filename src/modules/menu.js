@@ -1,6 +1,6 @@
 import { createElement, addClass } from "./helper.js";
 import menuItems from "../data/menuItems.json";
-import "../stylesheets/style.css";
+import "../stylesheets/menu.css";
 
 function createMenu() {
   let menuContainer = createElement("div"),

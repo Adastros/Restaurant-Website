@@ -1,0 +1,41 @@
+.menu-page-background {
+  background: 40% / cover no-repeat url("../images/menuPageBackground.jpg");
+}
+
+.menu-page-overlay {
+  backdrop-filter: blur(2px);
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.menu-container {
+  margin: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.menu-container h2 {
+  font-size: 3rem;
+  text-decoration: underline;
+}
+
+.menu-container h3 {
+  font-size: 2.5rem;
+}
+
+.menu-container p {
+  font-size: 1.5rem;
+}
+
+.entree-container {
+  margin-bottom: 2rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.menu-item > p > i {
+  margin-left: 0.5rem;
+}

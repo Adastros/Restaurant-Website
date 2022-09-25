@@ -4,7 +4,7 @@ import { renderAboutPage } from "./about.js";
 import { renderContactPage } from "./contact.js";
 import { createElement, addClass, removeClass } from "./helper.js";
 import logo from "../images/logo.png";
-import "../stylesheets/style.css";
+import "../stylesheets/header.css";
 
 function renderPage(page) {
   switch (page) {
