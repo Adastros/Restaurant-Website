@@ -7,12 +7,14 @@ import "../stylesheets/home.css";
 function createAddressContent() {
   let addressContainer = createElement("div"),
     addressHeader = createElement("h2"),
-    address = createElement("p");
+    addressStreet = createElement("p"),
+    addressRegionalArea = createElement("p");
 
   addressHeader.textContent = "Address";
-  address.textContent = "727 N Broadway, Los Angeles, CA 90012";
+  addressStreet.textContent = "727 N Broadway";
+  addressRegionalArea.textContent = "Los Angeles, CA 90012";
 
-  addressContainer.append(addressHeader, address);
+  addressContainer.append(addressHeader, addressStreet, addressRegionalArea);
 
   return addressContainer;
 }
@@ -20,12 +22,18 @@ function createAddressContent() {
 function createBusinessHoursContent() {
   let businessHoursContainer = createElement("div"),
     businessHoursHeader = createElement("h2"),
+    businessDay = createElement("p"),
     businessHours = createElement("p");
 
   businessHoursHeader.textContent = "Business Hours";
-  businessHours.textContent = "Open everyday from 10 AM to 9 PM";
+  businessDay.textContent = "Open everyday from";
+  businessHours.textContent = "10 AM to 9 PM";
 
-  businessHoursContainer.append(businessHoursHeader, businessHours);
+  businessHoursContainer.append(
+    businessHoursHeader,
+    businessDay,
+    businessHours
+  );
 
   return businessHoursContainer;
 }
@@ -85,8 +93,7 @@ function createSocialMediaLinks() {
 }
 
 function createGoogleMapsInteractable() {
-  let googleMapsContainer = createElement("div"),
-    googleMap = createElement("iframe");
+  let googleMap = createElement("iframe");
 
   googleMap.setAttribute(
     "src",
@@ -95,11 +102,7 @@ function createGoogleMapsInteractable() {
   googleMap.setAttribute("loading", "lazy");
   googleMap.setAttribute("referrerpolicy", "no-referrer-when-downgrade");
 
-  addClass(googleMapsContainer, "contact-page-google-maps-container");
-
-  googleMapsContainer.append(googleMap);
-
-  return googleMapsContainer;
+  return googleMap;
 }
 
 function createContactForm() {
@@ -132,7 +135,7 @@ function createContactForm() {
   firstNameInput.setAttribute("type", "text");
   firstNameInput.setAttribute("name", "firstName");
   firstNameInput.setAttribute("placeholder", "First Name");
-  firstNameInput.setAttribute('maxlength', '100');
+  firstNameInput.setAttribute("maxlength", "100");
   firstNameInput.setAttribute("required", "");
 
   lastNameLabel.textContent = "Last Name:";
@@ -141,7 +144,7 @@ function createContactForm() {
   lastNameInput.setAttribute("type", "text");
   lastNameInput.setAttribute("name", "lastName");
   lastNameInput.setAttribute("placeholder", "Last Name");
-  lastNameInput.setAttribute('maxlength', '100');
+  lastNameInput.setAttribute("maxlength", "100");
   lastNameInput.setAttribute("required", "");
 
   emailLabel.textContent = "Email:";
@@ -150,7 +153,7 @@ function createContactForm() {
   emailInput.setAttribute("type", "email");
   emailInput.setAttribute("name", "email");
   emailInput.setAttribute("placeholder", "Email");
-  emailInput.setAttribute('maxlength', '200');
+  emailInput.setAttribute("maxlength", "200");
   emailInput.setAttribute("required", "");
 
   messageLabel.textContent = "Message:";
@@ -158,8 +161,7 @@ function createContactForm() {
   messageTextarea.setAttribute("id", "message");
   messageTextarea.setAttribute("name", "message");
   messageTextarea.setAttribute("rows", "5");
-  messageTextarea.setAttribute("cols", "30");
-  messageTextarea.setAttribute('maxlength', '2000');
+  messageTextarea.setAttribute("maxlength", "2000");
   messageTextarea.setAttribute("required", "");
 
   submitButton.textContent = "SUBMIT";
