@@ -111,8 +111,8 @@
 
 @media (max-width: 1050px), screen and (orientation: portrait) {
   .contact-page-content-container {
-    min-width: 800px;
-    margin: 2rem;
+    min-width: 725px;
+    margin: 4rem 2rem;
   }
 
   .contact-page-business-contact-container {
@@ -140,11 +140,5 @@
   .contact-form button {
     margin-top: 1.5rem;
     padding: 14px 20px;
-  }
-}
-
-@media screen and (orientation: portrait) {
-  .contact-page-content-container {
-    min-width: 800px;
   }
 }
