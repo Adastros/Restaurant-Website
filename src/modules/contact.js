@@ -22,18 +22,12 @@ function createAddressContent() {
 function createBusinessHoursContent() {
   let businessHoursContainer = createElement("div"),
     businessHoursHeader = createElement("h2"),
-    businessDay = createElement("p"),
     businessHours = createElement("p");
 
   businessHoursHeader.textContent = "Business Hours";
-  businessDay.textContent = "Open everyday from";
-  businessHours.textContent = "10 AM to 9 PM";
+  businessHours.textContent = "Open everyday from 10 AM to 9 PM";
 
-  businessHoursContainer.append(
-    businessHoursHeader,
-    businessDay,
-    businessHours
-  );
+  businessHoursContainer.append(businessHoursHeader, businessHours);
 
   return businessHoursContainer;
 }
