@@ -7,7 +7,7 @@ function createHeroMessage() {
     heroSubtext = createElement("p");
 
   heroMainText.textContent = `THE BEST BURGERS IN SOCAL`;
-  heroSubtext.textContent = `HAND CRAFTED WITH THE FRESHEST INGREDIENTS`;
+  heroSubtext.textContent = `HAND CRAFTED ✕ FRESH INGREDIENTS`;
 
   heroMessageContainer.append(heroMainText);
   addClass(heroSubtext, "hero-subtext");

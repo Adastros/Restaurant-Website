@@ -7,10 +7,11 @@
 }
 
 .homepage-hero-offset {
-  margin-bottom: 165px;
+  padding-bottom: 165px;
 }
 
 .hero-container {
+  min-width: 500px;
   text-align: center;
   color: white;
 }
@@ -23,11 +24,21 @@
   font-size: 2.5rem;
 }
 
+/* 
+Centers to parent element <main> instead of 
+page due to spacing issue if not used
+ */
+@media (max-height: 1250px) {
+  .homepage-hero-offset {
+    padding-bottom: 0;
+  }
+}
+
 @media (max-height: 700px) {
   .hero-container > h1 {
     font-size: 3rem;
   }
-  
+
   .hero-subtext {
     font-size: 1.5rem;
   }
