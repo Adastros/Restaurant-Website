@@ -48,3 +48,28 @@
     gap: 2rem;
   }
 }
+
+@media (max-height: 700px) {
+  .menu-grid {
+    display: grid;
+    grid-template-columns: 400px;
+    gap: 2rem;
+  }
+
+  .menu-container h2 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+
+  .menu-container h3 {
+    font-size: 2rem;
+  }
+
+  .menu-container p {
+    font-size: 1rem;
+  }
+
+  .entree-container {
+    margin-bottom: 3rem;
+  }
+}

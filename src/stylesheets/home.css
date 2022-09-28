@@ -23,8 +23,12 @@
   font-size: 2.5rem;
 }
 
-@media (max-height: 1000px) {
-  .homepage-hero-offset {
-    margin-bottom: 0px;
+@media (max-height: 700px) {
+  .hero-container > h1 {
+    font-size: 3rem;
+  }
+  
+  .hero-subtext {
+    font-size: 1.5rem;
   }
 }

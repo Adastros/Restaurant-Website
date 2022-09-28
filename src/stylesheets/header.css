@@ -27,3 +27,22 @@
 .logoImg {
   height: 3.75rem;
 }
+
+@media (max-height: 700px) {
+  .nav-list {
+    gap: 2.5rem;
+    font-size: 2.5rem;
+  }
+
+  .site-logo {
+    gap: 12px;
+  }
+
+  .logo-name {
+    font-size: 3.5rem;
+  }
+
+  .logoImg {
+    height: 2.75rem;
+  }
+}

@@ -142,3 +142,9 @@
     padding: 14px 20px;
   }
 }
+
+@media (max-height: 700px) {
+  .contact-page iframe {
+    height: 300px;
+  }
+}
