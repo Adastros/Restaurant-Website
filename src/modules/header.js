@@ -56,6 +56,7 @@ function createNameAndLogo() {
 
   restaurantNameElement.textContent = `Bob's Bangin Burgers`;
   addClass(restaurantNameElement, "logo-name");
+  
   logoElement.setAttribute("src", logo);
   logoElement.setAttribute("alt", `Bob's Bangin Burgers Logo`);
   addClass(logoElement, "logoImg");

@@ -23,10 +23,8 @@ function createAboutPageElements() {
   aboutImage.setAttribute("src", aboutImg);
   aboutImage.setAttribute("alt", "Chef Bob Gray makng a Bangin Bird Burger");
 
-  aboutHistoryContainer.append(aboutHeader);
-  aboutHistoryContainer.append(aboutHistory);
-  aboutContainer.append(aboutHistoryContainer);
-  aboutContainer.append(aboutImage);
+  aboutHistoryContainer.append(aboutHeader, aboutHistory);
+  aboutContainer.append(aboutHistoryContainer, aboutImage);
 
   addClass(aboutContainer, "about-page-main-container");
   addClass(aboutHistoryContainer, "about-history-container");

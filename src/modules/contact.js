@@ -77,11 +77,8 @@ function createSocialMediaLinks() {
   addClass(iconContainer, "social-media-icon-container");
   addClass(socialMediaContainer, "social-media-container");
 
-  iconContainer.append(facebookLink);
-  iconContainer.append(instagramLink);
-  iconContainer.append(twitterLink);
-  socialMediaContainer.append(socialMediaHeader);
-  socialMediaContainer.append(iconContainer);
+  iconContainer.append(facebookLink, instagramLink, twitterLink);
+  socialMediaContainer.append(socialMediaHeader, iconContainer);
 
   return socialMediaContainer;
 }
@@ -211,9 +208,7 @@ function createContactContent() {
     addressContent,
     socialMediaLinks
   );
-
   businessContactContainer.append(businessInfoContainer, contactForm);
-
   contactContentContainer.append(googleMapInterable, businessContactContainer);
 
   return contactContentContainer;
@@ -225,9 +220,9 @@ function renderContactPage() {
     mainElement = document.querySelector("main");
 
   addClass(contactTab, "selected-tab");
+  addClass(mainElement, "contact-page");
 
   mainElement.append(createContactContent());
-  addClass(mainElement, "contact-page");
 }
 
 export { renderContactPage };

@@ -22,8 +22,7 @@ function createMenu() {
     itemPrice.textContent = item.price;
 
     itemDescription.append(itemPrice);
-    menuItem.append(itemHeader);
-    menuItem.append(itemDescription);
+    menuItem.append(itemHeader, itemDescription);
 
     addClass(menuItem, "menu-item");
 
@@ -38,17 +37,14 @@ function createMenu() {
   addClass(sidesItemContainer, "menu-grid");
 
   entreeHeader.textContent = "Burgers";
-  entreeContainer.append(entreeHeader);
-  entreeContainer.append(entreeItemContainer);
+  entreeContainer.append(entreeHeader, entreeItemContainer);
   addClass(entreeContainer, "entree-container");
 
   sidesHeader.textContent = "Sides";
-  sidesContainer.append(sidesHeader);
-  sidesContainer.append(sidesItemContainer);
+  sidesContainer.append(sidesHeader, sidesItemContainer);
   addClass(sidesContainer, "sides-container");
 
-  menuContainer.append(entreeContainer);
-  menuContainer.append(sidesContainer);
+  menuContainer.append(entreeContainer, sidesContainer);
   addClass(menuContainer, "menu-container");
 
   return menuContainer;

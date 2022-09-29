@@ -9,10 +9,10 @@ function createHeroMessage() {
   heroMainText.textContent = `THE BEST BURGERS IN SOCAL`;
   heroSubtext.textContent = `HAND CRAFTED ✕ FRESH INGREDIENTS`;
 
-  heroMessageContainer.append(heroMainText);
   addClass(heroSubtext, "hero-subtext");
-  heroMessageContainer.append(heroSubtext);
   addClass(heroMessageContainer, "hero-container");
+
+  heroMessageContainer.append(heroMainText, heroSubtext);
 
   return heroMessageContainer;
 }
@@ -23,12 +23,12 @@ function renderHomePage() {
     mainElement = document.querySelector("main"),
     homeTab = document.querySelector(`[data-tab = 'home']`);
 
-  mainElement.append(createHeroMessage());
   addClass(mainElement, "homepage-hero-offset");
-
   addClass(bodyElement, "homepage-background");
   addClass(contentDiv, "homepage-overlay");
   addClass(homeTab, "selected-tab");
+
+  mainElement.append(createHeroMessage());
 }
 
 export { renderHomePage };
