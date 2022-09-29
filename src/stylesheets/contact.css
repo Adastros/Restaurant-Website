@@ -93,17 +93,17 @@
   filter: brightness(0.8);
 }
 
-.input-field {
+.contact-form-input-field {
   display: flex;
   flex-direction: column;
 }
 
-.social-media-icon-container {
+.contact-page-social-media-icon-container {
   display: flex;
   gap: 1.5rem;
 }
 
-.social-media-container {
+.contact-page-social-media-container {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -125,7 +125,7 @@
     flex: none;
   }
 
-  .social-media-icon-container {
+  .contact-page-social-media-icon-container {
     gap: 2.5rem;
   }
 

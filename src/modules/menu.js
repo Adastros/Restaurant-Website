@@ -42,7 +42,6 @@ function createMenu() {
 
   sidesHeader.textContent = "Sides";
   sidesContainer.append(sidesHeader, sidesItemContainer);
-  addClass(sidesContainer, "sides-container");
 
   menuContainer.append(entreeContainer, sidesContainer);
   addClass(menuContainer, "menu-container");
@@ -58,7 +57,7 @@ function renderMenuPage() {
 
   addClass(bodyElement, "menu-page-background");
   addClass(contentDiv, "menu-page-overlay");
-  addClass(menuTab, "selected-tab");
+  addClass(menuTab, "header-selected-tab");
 
   mainElement.append(createMenu());
 }

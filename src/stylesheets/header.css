@@ -1,4 +1,4 @@
-.nav-list {
+.header-nav-list {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,41 +8,40 @@
   font-size: 3.5rem;
 }
 
-.selected-tab {
+.header-selected-tab {
   color: white;
 }
 
-.site-logo {
+.header-site-logo {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
   gap: 16px;
 }
 
-.logo-name {
+.header-logo-name {
   font-size: 4.5rem;
   color: white;
 }
 
-.logoImg {
+.header-logoImg {
   height: 3.75rem;
 }
 
 @media (max-height: 1000px) {
-  .nav-list {
+  .header-nav-list {
     gap: 2.5rem;
     font-size: 2.5rem;
   }
 
-  .site-logo {
+  .header-site-logo {
     gap: 12px;
   }
 
-  .logo-name {
+  .header-logo-name {
     font-size: 3.5rem;
   }
 
-  .logoImg {
+  .header-logoImg {
     height: 2.75rem;
   }
 }

@@ -74,8 +74,8 @@ function createSocialMediaLinks() {
   twitterLink.setAttribute("href", "#");
   twitterLink.append(twitterIcon);
 
-  addClass(iconContainer, "social-media-icon-container");
-  addClass(socialMediaContainer, "social-media-container");
+  addClass(iconContainer, "contact-page-social-media-icon-container");
+  addClass(socialMediaContainer, "contact-page-social-media-container");
 
   iconContainer.append(facebookLink, instagramLink, twitterLink);
   socialMediaContainer.append(socialMediaHeader, iconContainer);
@@ -163,10 +163,10 @@ function createContactForm() {
   contactForm.setAttribute("name", "contactForm");
 
   addClass(contactFormHeaderContainer, "contact-form-header-container");
-  addClass(firstNameContainer, "input-field");
-  addClass(lastNameContainer, "input-field");
-  addClass(emailContainer, "input-field");
-  addClass(messageContainer, "input-field");
+  addClass(firstNameContainer, "contact-form-input-field");
+  addClass(lastNameContainer, "contact-form-input-field");
+  addClass(emailContainer, "contact-form-input-field");
+  addClass(messageContainer, "contact-form-input-field");
   addClass(contactForm, "contact-form");
   addClass(contactFormContainer, "contact-form-container");
 
@@ -219,7 +219,7 @@ function renderContactPage() {
     bodyElement = document.querySelector("body"),
     mainElement = document.querySelector("main");
 
-  addClass(contactTab, "selected-tab");
+  addClass(contactTab, "header-selected-tab");
   addClass(mainElement, "contact-page");
 
   mainElement.append(createContactContent());

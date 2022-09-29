@@ -31,12 +31,12 @@ function addNavItemListener(navListItem) {
     let bodyElement = document.querySelector("body"),
       mainElement = document.querySelector("main"),
       contentDiv = document.querySelector(".content"),
-      currentSelectedNavListItem = document.querySelector(".selected-tab");
+      currentSelectedNavListItem = document.querySelector(".header-selected-tab");
 
     // clear out unneeded classes
     bodyElement.removeAttribute("class");
     mainElement.removeAttribute("class");
-    removeClass(currentSelectedNavListItem, "selected-tab");
+    removeClass(currentSelectedNavListItem, "header-selected-tab");
     contentDiv.className = "content";
 
     // clear out all child elements
@@ -55,15 +55,15 @@ function createNameAndLogo() {
     logoElement = createElement("img");
 
   restaurantNameElement.textContent = `Bob's Bangin Burgers`;
-  addClass(restaurantNameElement, "logo-name");
-  
+  addClass(restaurantNameElement, "header-logo-name");
+
   logoElement.setAttribute("src", logo);
   logoElement.setAttribute("alt", `Bob's Bangin Burgers Logo`);
-  addClass(logoElement, "logoImg");
+  addClass(logoElement, "header-logoImg");
 
   restaurantNameAndLogoContainer.append(restaurantNameElement);
   restaurantNameAndLogoContainer.append(logoElement);
-  addClass(restaurantNameAndLogoContainer, "site-logo");
+  addClass(restaurantNameAndLogoContainer, "header-site-logo");
 
   return restaurantNameAndLogoContainer;
 }
@@ -86,7 +86,7 @@ function createNav() {
     navList.append(navListItem);
   }
 
-  addClass(navList, "nav-list");
+  addClass(navList, "header-nav-list");
   navElement.append(navList);
 
   return navElement;

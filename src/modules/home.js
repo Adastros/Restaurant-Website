@@ -9,8 +9,8 @@ function createHeroMessage() {
   heroMainText.textContent = `THE BEST BURGERS IN SOCAL`;
   heroSubtext.textContent = `HAND CRAFTED ✕ FRESH INGREDIENTS`;
 
-  addClass(heroSubtext, "hero-subtext");
-  addClass(heroMessageContainer, "hero-container");
+  addClass(heroSubtext, "homepage-hero-subtext");
+  addClass(heroMessageContainer, "homepage-hero-container");
 
   heroMessageContainer.append(heroMainText, heroSubtext);
 
@@ -26,7 +26,7 @@ function renderHomePage() {
   addClass(mainElement, "homepage-hero-offset");
   addClass(bodyElement, "homepage-background");
   addClass(contentDiv, "homepage-overlay");
-  addClass(homeTab, "selected-tab");
+  addClass(homeTab, "header-selected-tab");
 
   mainElement.append(createHeroMessage());
 }

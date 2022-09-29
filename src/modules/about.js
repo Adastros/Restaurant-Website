@@ -27,8 +27,8 @@ function createAboutPageElements() {
   aboutContainer.append(aboutHistoryContainer, aboutImage);
 
   addClass(aboutContainer, "about-page-main-container");
-  addClass(aboutHistoryContainer, "about-history-container");
-  addClass(aboutImage, "about-img");
+  addClass(aboutHistoryContainer, "about-page-history-container");
+  addClass(aboutImage, "about-page-img");
 
   return aboutContainer;
 }
@@ -38,7 +38,7 @@ function renderAboutPage() {
     bodyElement = document.querySelector("body"),
     mainElement = document.querySelector("main");
 
-  addClass(aboutTab, "selected-tab");
+  addClass(aboutTab, "header-selected-tab");
 
   mainElement.append(createAboutPageElements());
 }
