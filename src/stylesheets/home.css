@@ -6,12 +6,9 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 
-.homepage-hero-offset {
-  padding-bottom: 165px;
-}
-
 .hero-container {
   min-width: 500px;
+  margin: 6rem 0;
   text-align: center;
   color: white;
 }
@@ -24,22 +21,12 @@
   font-size: 2.5rem;
 }
 
-/* 
-Centers to parent element <main> instead of 
-page due to spacing issue if not used
- */
-@media (max-height: 1250px) {
-  .homepage-hero-offset {
-    padding-bottom: 0;
-  }
-}
-
-@media (max-height: 700px) {
+@media (max-height: 1000px) {
   .hero-container > h1 {
-    font-size: 3rem;
+    font-size: 4rem;
   }
 
   .hero-subtext {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }

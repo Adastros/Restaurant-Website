@@ -13,7 +13,7 @@
 
 .contact-page a,
 .contact-page img {
-  height: 50px;
+  height: 60px;
 }
 
 .contact-page iframe {
@@ -109,7 +109,7 @@
   gap: 0.5rem;
 }
 
-@media (max-width: 1050px), screen and (orientation: portrait) {
+@media (max-width: 1079px), screen and (orientation: portrait) {
   .contact-page-content-container {
     min-width: 725px;
     margin: 4rem 2rem;

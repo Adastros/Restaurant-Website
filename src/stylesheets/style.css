@@ -25,10 +25,6 @@ main {
   flex: 1;
 }
 
-header {
-  height: 165px;
-}
-
 a {
   text-decoration: none;
   color: rgb(255, 255, 255, 0.7);
