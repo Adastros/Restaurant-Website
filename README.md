@@ -1,7 +1,7 @@
 # Restaurant-Website
 
 ## About
-This project is a simple restuarant website hosted on GitHub Pages. The theme of the website revolves around gourmet burgers and was inspired by restuarant websites such as Fatburger and the Federalist Pig. The name of the restaurant was inspired by the show Bob's Burgers.
+This project is a simple restaurant website hosted on GitHub Pages. The theme of the website revolves around gourmet burgers and was inspired by restaurant websites such as Fatburger and the Federalist Pig. The name of the restaurant was inspired by the show Bob's Burgers.
 
 ## Project Stack
 <img src="https://skillicons.dev/icons?i=js,html,css,webpack">
