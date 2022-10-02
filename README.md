@@ -13,4 +13,4 @@ This project is a simple restaurant website hosted on GitHub Pages. The theme of
 - How to build a website primarily using javascript and css
 
 ## Live Link to Website
-https://adastros.github.io/Restuarant-Website/
+https://adastros.github.io/Restaurant-Website/
